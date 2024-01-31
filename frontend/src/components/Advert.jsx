@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import {NavLink} from "react-router-dom"
+import { useNavigate } from 'react-router-dom'; 
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import Maps from './Maps';
-const Advert =({advert,admin,onclick})=>{
+const Advert =({advert,admin,onClick})=>{
+    const navigate = useNavigate();
     const performClick =(evt)=>{
-        onclick(evt,advert.id);
+        navigate(`/advert/${advert.id}`);
     };
  
 
 return(
-<div className="list-group-item">
-    <div className="card-item">
-        <div className="card-top">
+<div className="list-group-item"  >
+    <div className="card-item"  onClick={performClick} >
+        <div className="card-top" >
        
         <h4>
         <FontAwesomeIcon  icon={faUser} />

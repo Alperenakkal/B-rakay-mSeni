@@ -1,6 +1,6 @@
 import React from "react";
 import Advert from "./Advert";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 const AdvertList=({adverts=[],admin,onClick})=>{
     const performClick =(evt,id)=>{
         onClick(evt,id);
@@ -13,6 +13,7 @@ const AdvertList=({adverts=[],admin,onClick})=>{
             )}
             
         </div>
+       
     )
 }
 export default AdvertList;

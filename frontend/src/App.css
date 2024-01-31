@@ -6774,12 +6774,17 @@ button.close {
 /*Advert Card */
 .card-item {
   max-width: 800px;
-  
   padding: 15px;
   margin: 5px;
   min-width: 1px;
   flex-direction: column;
   border-bottom: 1px solid #ddd;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card-item:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #bbbbbb;
 }
 .card-item:last-child {
   border-bottom: none;
@@ -6869,5 +6874,18 @@ button.close {
   height: 30%;  /* Genişliği artırabilirsiniz */
   
 
+}
+.search{
+  height: 100px;
+  background-color: #F4EBD0;
+  border:  2px solid #7F6951;
+}
+.large-input {
+  width: 50%; /* ya da istediğiniz genişlik değeri */
+  padding: 10px; /* Daha büyük bir padding değeri */
+  font-size: 16px; /* Daha büyük bir font boyutu */
+}
+.large-label {
+  font-size: 18px; /* İstediğiniz font boyutu */
 }
 
