@@ -31,7 +31,8 @@ const AddAdverts =()=>{
     }
 
     return(
-        <div className="form-container">
+        <div className="form-container form-spacing">
+        
         <div className="col-xs-12 col-md-6">
             <form className="form-horizontal" id="addAdvet" onSubmit={(evt)=>onSubmit(evt)}>
                 <div className="form-group">
@@ -89,6 +90,7 @@ const AddAdverts =()=>{
 
         </div>
         </div>
+        
         
     )
 }

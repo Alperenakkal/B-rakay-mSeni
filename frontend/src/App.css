@@ -1609,6 +1609,16 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+@media (min-width: 992px) {
+  .container-fluid {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-fluid {
+    width: 1170px;
+  }
+}
 .row {
   margin-right: -15px;
   margin-left: -15px;
@@ -4184,7 +4194,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-collapse {
- 
+ background-color: #ffff;
   padding-right: 15px;
   padding-left: 15px;
   overflow-x: visible;
@@ -4309,6 +4319,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  color: #000;
+  background-color: #000;
 }
 .navbar-toggle:focus {
   outline: 0;
@@ -4501,13 +4513,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   font-size: 20px;
-  background-color: #fff;
-  border-color: #e7e7e7;
-  height: 100px;
+  background-color: #fff ;
+  border-color: #e7e7e7 ;
+  height: 60px;
   border-radius: 15px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 
 
+}
+@media (max-width: 767px) {
+  .navbar-default {
+    font-size: 15px;
+    
+  }
 }
 .navbar-default .navbar-brand {
   color: #777;
@@ -5279,6 +5297,23 @@ a.thumbnail.active {
   margin-bottom: 0;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+@media (max-width: 1024px) {
+  .list-group-item {
+      max-width: 100%; /* Tam genişlik */
+      max-height: none; /* Yükseklik sınırlamasını kaldır */
+      margin-bottom: 10px; /* Daha fazla boşluk */
+  }
+}
+
+/* Mobil cihazlar için (genellikle 768px ve altı) */
+@media (max-width: 768px) {
+  .list-group-item {
+      max-width: 100%; /* Tam genişlik */
+      max-height: none; /* Yükseklik sınırlamasını kaldır */
+      margin-bottom: 15px; /* Daha fazla boşluk */
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3); /* Daha hafif gölge */
+  }
 }
 a.list-group-item,
 button.list-group-item {
@@ -6775,15 +6810,17 @@ button.close {
 
 /*# sourceMappingURL=bootstrap.css.map */
 /*Advert Card */
+
 .card-item {
   max-width: 800px;
   padding: 15px;
-  margin: 5px;
+  margin: 10px auto; /* Merkezleme ve dikey boşluk sağlama */
   min-width: 1px;
   flex-direction: column;
   border-bottom: 1px solid #ddd;
   transition: 0.2s;
   cursor: pointer;
+  width: 100%; /* Tam genişlik kullan */
 }
 .card-item:hover{
   transform: translateY(-0.5rem);
@@ -6819,11 +6856,13 @@ button.close {
   border-radius: 10px;
 }
 .address-container {
-  border:  2px solid #7F6951;
+  border: 2px solid #7F6951;
   border-radius: 15px;
-  text-align: right; 
+  text-align: right;
   align-items: center;
   justify-content: center;
+  word-wrap: break-word;
+  overflow-x: auto; /* Yatay taşmada kaydırma çubuğu ekler */
 }
 .start-point{
   display: flex;
@@ -6843,6 +6882,9 @@ button.close {
   font-size: 30px;
   text-align: left;
   margin: 0 10px;
+}
+.form-spacing {
+  margin-top: 70px; /* Navbar yüksekliğine bağlı olarak bu değeri ayarlayın */
 }
 /* Küçük ekranlar için düzenlemeler */
 @media (max-width: 600px) {
@@ -6864,6 +6906,7 @@ button.close {
 }
 /*Home Sayfası*/
 .home{
+  margin-top: 10%;
   display: flex;
   
   
@@ -6899,6 +6942,7 @@ button.close {
 }
 
 .form-container {
+  
   background-color: #F4EBD0;
   border:  2px solid #7F6951;
   border-radius: 15px;
@@ -6907,5 +6951,90 @@ button.close {
   align-items: center;
   min-height: 100vh;
 }
+@media (max-width: 768px) {
+  .home {
+      flex-direction: column;
+  }
 
+  .home .advertlist, .home .maps {
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  /* İçerik ve arama kutusunun boyutlarını ayarlayın */
+  .search, .large-input {
+      width: 90%; /* İçerik genişliğini azalt */
+  }
+  card-item {
+    /* Kartın tablet görünümünü iyileştirin */
+    flex-direction: column;
+}
+
+.card-top {
+    flex-direction: column;
+    align-items: start;
+}
+
+
+.address-container {
+ 
+    /* Tablet için daha uygun border boyutu */
+    border: 1px solid #7F6951;
+    border-radius: 10px;
+    text-align: left; /* Tablet görünümünde sola hizalama */
+
+  }
+
+.start-point, .end-point {
+    /* Başlangıç ve bitiş noktası stilini düzenleyin */
+    flex-direction: column;
+    align-items: start;
+}
+.form-container {
+  padding: 20px; /* İç boşluğu artır */
+  align-items: stretch; /* Elemanları genişlet */
+}
+}
+
+/* Mobil cihazlar için */
+@media (max-width: 576px) {
+  .home .advertlist, .home .maps {
+      width: 100%;
+  }
+
+  /* Mobil cihazlarda arama kutusunun ve içeriğin boyutlarını ayarlayın */
+  .search, .large-input {
+      width: 100%; /* İçerik genişliğini artır */
+  }
+  
+  .card-item {
+    /* Kartların mobil görünümünü iyileştirin */
+    flex-direction: column;
+    align-items: center;
+    margin: 5px; 
+}
+
+.card-top {
+    flex-direction: column;
+    align-items: center;
+}
+
+.address-container {
+  /* Tablet için daha uygun border boyutu */
+  border: 1px solid #7F6951;
+  border-radius: 10px;
+  text-align: center;  /* Tablet görünümünde sola hizalama */
+  overflow-x: auto; /* Yatay taşmada kaydırma çubuğu ekler */
+  overflow-y: auto; 
+}
+
+.start-point, .end-point {
+    /* Başlangıç ve bitiş noktası stilini düzenleyin */
+    align-items: center;
+}
+.form-container {
+  padding: 20px; /* İç boşluğu artır */
+  align-items: stretch; /* Elemanları genişlet */
+}
+}
 

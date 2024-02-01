@@ -49,7 +49,7 @@ const Home =()=>{
           (advert.endLocation ? advert.endLocation.toLowerCase().includes(searchAdverts.toLowerCase()) : false)
       );
    
-  console.log(adverts.data[0])
+  
     return(
        
         <div className="list-group">
