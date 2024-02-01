@@ -8,9 +8,9 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+  
 }
 body {
-  
   margin: 0;
 }
 article,
@@ -2554,8 +2554,8 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
+  color: #f7e1b5;
+  background-color: #4A4A4A;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -2629,6 +2629,7 @@ input[type="search"] {
     line-height: 46px;
   }
 }
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -2976,6 +2977,8 @@ select[multiple].input-lg {
   min-height: 27px;
 }
 .form-horizontal .form-group {
+  
+  text-align: center;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -6879,8 +6882,14 @@ button.close {
   height: 100px;
   background-color: #F4EBD0;
   border:  2px solid #7F6951;
+  border-radius: 15px;
+  align-items: center;
+  flex-direction: column;
+  
+
 }
 .large-input {
+  background-color: #E0FFFF;
   width: 50%; /* ya da istediğiniz genişlik değeri */
   padding: 10px; /* Daha büyük bir padding değeri */
   font-size: 16px; /* Daha büyük bir font boyutu */
@@ -6888,4 +6897,15 @@ button.close {
 .large-label {
   font-size: 18px; /* İstediğiniz font boyutu */
 }
+
+.form-container {
+  background-color: #F4EBD0;
+  border:  2px solid #7F6951;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
 

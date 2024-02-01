@@ -9,7 +9,7 @@ const addAdvert =async function(req,res){
             ...req.body,
             hours:[
                 {
-                days: req.body.day,
+                days: req.body.days,
                 open: req.body.open,
                 close:req.body.close,
                 }],

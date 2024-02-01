@@ -3,6 +3,6 @@ export default axios.create({
     baseURL:'http://localhost:3000/api',
     headers:{
         'Accept':'application/json',
-        'Content-Type':'apllication/json;charset=UTF-8'
+        'Content-Type':'application/json;charset=UTF-8'
     }
 })

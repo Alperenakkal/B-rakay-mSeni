@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 function NavBar() {
-
+ 
 
       
 
@@ -19,9 +19,8 @@ function NavBar() {
             <NavLink to="/" style={{color:"#091235"}}>Ana Sayfa</NavLink>
         </li>
         <li>
-            <NavLink to="/" style={{color:"#091235"}}>İlan Ver</NavLink>
+            <NavLink to="newAdvert" style={{color:"#091235"}}>İlan Ver</NavLink>
         </li>
-
     </ul>
     <ul className="nav navbar-nav navbar-right">
     <li className="dropdown">
@@ -33,6 +32,7 @@ function NavBar() {
           <ul className="dropdown-menu">
             <li><a href="#">Giriş Yap</a></li>
             <li><a href="#">Üye Ol</a></li>
+            <li><a href="">İlanlarim</a></li>
             <li><a href="#">Çıkış Yap</a></li>
          
           </ul>
